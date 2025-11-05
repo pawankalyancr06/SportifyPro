@@ -32,30 +32,30 @@ const Navbar = () => {
           : 'bg-transparent'
       }`}
     >
-      <div className="container mx-auto px-4 py-4">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
         <div className="flex items-center justify-between">
           {/* Logo */}
           <Link to="/" className="flex items-center gap-2 group">
             <div className="relative">
-              <Play className="w-8 h-8 text-primary" fill="currentColor" />
+              <Play className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 text-primary" fill="currentColor" />
               <motion.div
                 className="absolute inset-0 bg-primary rounded-full blur-md opacity-50"
                 animate={{ scale: [1, 1.2, 1] }}
                 transition={{ duration: 2, repeat: Infinity }}
               />
             </div>
-            <span className="text-2xl font-heading font-bold gradient-text">
+            <span className="text-xl sm:text-2xl font-heading font-bold gradient-text">
               SportifyPro
             </span>
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center gap-8">
+          <div className="hidden md:flex items-center gap-4 lg:gap-6">
             {navLinks.map((link) => (
               <Link
                 key={link.path}
                 to={link.path}
-                className={`relative text-sm font-semibold transition-colors ${
+                className={`relative text-sm font-semibold transition-colors whitespace-nowrap ${
                   location.pathname === link.path
                     ? 'text-primary'
                     : 'text-neutral hover:text-primary'
@@ -72,7 +72,7 @@ const Navbar = () => {
             ))}
             <Link
               to="/venues"
-              className="btn-glow bg-gradient-primary text-secondary px-6 py-2 rounded-full font-bold text-sm hover:shadow-glow"
+              className="btn-glow bg-gradient-primary text-secondary px-4 py-2 lg:px-6 lg:py-2 rounded-full font-bold text-xs lg:text-sm hover:shadow-glow transition"
             >
               Book Now
             </Link>

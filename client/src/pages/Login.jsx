@@ -32,11 +32,11 @@ const Login = () => {
   };
 
   return (
-    <div className="min-h-screen bg-secondary pt-24 flex items-center justify-center px-4">
+    <div className="min-h-screen bg-secondary pt-20 md:pt-24 flex items-center justify-center px-4 py-8">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
-        className="glass rounded-2xl p-8 md:p-12 max-w-md w-full"
+        className="glass rounded-xl md:rounded-2xl p-6 sm:p-8 md:p-10 max-w-md w-full"
       >
         {/* Logo */}
         <div className="text-center mb-8">

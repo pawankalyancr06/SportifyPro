@@ -131,23 +131,23 @@ const Venues = () => {
   const sports = ['Football', 'Cricket', 'Basketball', 'Tennis', 'Badminton', 'Volleyball'];
 
   return (
-    <div className="min-h-screen bg-secondary pt-24">
-      <div className="container mx-auto px-4 py-8">
+    <div className="min-h-screen bg-secondary pt-20 md:pt-24">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl py-6 md:py-8">
         {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
-          className="mb-8"
+          className="mb-6 md:mb-8"
         >
-          <h1 className="text-5xl font-heading font-black mb-4">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-heading font-black mb-3">
             <span className="gradient-text">Discover</span> Venues
           </h1>
-          <p className="text-neutral text-lg">Find the perfect sports venue for your game</p>
+          <p className="text-neutral text-sm sm:text-base md:text-lg">Find the perfect sports venue for your game</p>
         </motion.div>
 
         {/* Search and Filter Bar */}
-        <div className="glass rounded-2xl p-6 mb-8">
-          <div className="flex flex-col md:flex-row gap-4">
+        <div className="glass rounded-xl md:rounded-2xl p-4 sm:p-5 md:p-6 mb-6 md:mb-8">
+          <div className="flex flex-col md:flex-row gap-3 md:gap-4">
             {/* Search */}
             <div className="flex-1 relative">
               <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-neutral w-5 h-5" />
@@ -230,15 +230,15 @@ const Venues = () => {
         </div>
 
         {/* Results Count */}
-        <div className="mb-6">
-          <p className="text-neutral">
+        <div className="mb-4 md:mb-6">
+          <p className="text-neutral text-sm sm:text-base">
             Found <span className="text-primary font-bold">{filteredVenues.length}</span> venues
           </p>
         </div>
 
         {/* Venues Grid */}
         {filteredVenues.length > 0 ? (
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 md:gap-8">
             {filteredVenues.map((venue, index) => (
               <motion.div
                 key={venue.id}
